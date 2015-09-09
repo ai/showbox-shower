@@ -30,8 +30,9 @@ module.exports = function (cssFile, talk) {
 
             var html = '<header class="caption">' + talk.body + '</header>';
             talk.slides.forEach(function (slide, i) {
-                var cls = ['slide', 'is-' + i].concat(slide.types).join(' ');
-                html += '<section class="' + cls + '" id="' + (i + 1) + '">' +
+                var num = i + 1;
+                var cls = ['slide', 'is-' + num].concat(slide.types).join(' ');
+                html += '<section class="' + cls + '" id="' + num + '">' +
                             '<div>' + slide.body + '</div>' +
                         '</section>';
             });
