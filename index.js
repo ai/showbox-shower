@@ -43,8 +43,8 @@ module.exports = function (cssFile, talk) {
                             'content="width=680, user-scalable=no">';
 
             resolve({
-                slide: function (number) {
-                    return '.slide.is-' + number;
+                slide: function (index) {
+                    return '.slide.is-' + (index + 1);
                 },
                 body: ' class="list"',
                 head: meta,
