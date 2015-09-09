@@ -35,7 +35,9 @@ module.exports = function (cssFile, talk) {
                             '<div>' + slide.body + '</div>' +
                         '</section>';
             });
-            html += '<div class="progress"><div></div></div>';
+            html += '<div class="progress">' +
+                        '<div class="progressbar"></div>' +
+                    '</div>';
 
             var meta = '<meta name="viewport" ' +
                             'content="width=680, user-scalable=no">';
