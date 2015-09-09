@@ -30,7 +30,7 @@ module.exports = function (cssFile, talk) {
 
             var html = '<header class="caption">' + talk.body + '</header>';
             talk.slides.forEach(function (slide, i) {
-                var cls = ['slide'].concat(slide.types).join(' ');
+                var cls = ['slide', 'is-' + i].concat(slide.types).join(' ');
                 html += '<section class="' + cls + '" id="' + (i + 1) + '">' +
                             '<div>' + slide.body + '</div>' +
                         '</section>';
@@ -41,6 +41,9 @@ module.exports = function (cssFile, talk) {
                             'content="width=680, user-scalable=no">';
 
             resolve({
+                slide: function (number) {
+                    return '.slide.is-' + number;
+                },
                 body: ' class="list"',
                 head: meta,
                 html: html,
