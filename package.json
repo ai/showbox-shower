@@ -10,9 +10,9 @@
   "license": "MIT",
   "repository": "ai/showbox-shower",
   "dependencies": {
-    "shower-core": "1.0.7",
-    "postcss-url": "5.0.0",
-    "postcss":     "5.0.4"
+    "shower-core": "~1.0.7",
+    "postcss-url": "^5.0.0",
+    "postcss":     "^5.0.4"
   },
   "devDependencies": {
     "eslint": "1.3.1"
